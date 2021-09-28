@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="script.js"></script>
+    <title>Document</title>
+    
+</head>
+
+<style>
+   
+
+    .tabela{
+
+        margin: 0 auto;
+        padding-left:25px;
+        
+        
+
+    }
+
+    .tabela-div{
+        margin: 0 auto;
+        width:300px;
+        margin-top: 90px;
+        position: relative;
+        left: 300px;
+        bottom:430px;
+        
+    }
+
+    .resultado{
+        margin-left: 30px;
+        margin-top: 10px;
+        
+    }
+
+    .beta{
+        font-size: 10px;
+        position: relative;
+        top: -10px;
+        
+    }
+
+    .titulo{
+        margin-left: 20px;
+        margin-top: 8px;
+    }
+
+    .form{
+        
+        width: 500px;
+        
+    }
+
+    .equacao{
+        margin-left: 30px;
+        
+    }
+
+    .presultado{
+        margin-top: 40px;
+        margin-left: 20px;
+        margin-bottom: 0px;
+    }
+
+    .botaoLimpar{
+        position: relative;
+        top:100px
+        
+    }
+</style>
+<body>
+    <h1 class="titulo">Potência</h1>
+    <div class="form">    
+        <form class="form-inline" style="margin-left: 30px;padding-top: 30px;" action="adicionar">
+            <div class="form-group mb-2">
+                <input type="number" class="form-control w-25 d-inline" name="x" id="number-x" required>
+                <input type="button" id="btn-x" class="btn btn-primary mb-2" value="Adicionar valor X" onclick="adicionarX()">
+            </div>
+
+            <div class="form-group mb-2">
+                <input type="number" class="form-control w-25 d-inline" name="y" id="number-y" required>
+                <input type="button" id="btn-y" class="btn btn-primary mb-2" value="Adicionar valor Y"onclick="adicionarY()">
+            </div>
+   
+        </form>
+    </div>    
+
+        
+
+        <input type="button" class="btn btn-outline-success resultado" id="Resultado" value="Resultado" onclick="result()">
+        
+        <p class="presultado">Resultado:</p><h2 class="equacao">y=<span id="alpha">0.000000</span>*χ<span class="beta" id="beta">0.000000</span></h2>
+    
+        <span class="text-uppercase fixed-bottom">***você pode excluir o número incluido na tabela clicando nele </span>
+
+        <input type="button" class="btn btn-danger resultado botaoLimpar"  id="limpar" value="Limpar Tudo" onclick="limpar()">
+        <div class="tabela-div">
+            
+            <table class=" tabela table-hover table d-inline">
+                <thead>
+                    <th>Valor de X</th>
+
+                </thead>
+                <tbody id="tbodyX">
+                
+                </tbody>
+            </table>
+            <table class=" table-hover table w-50 d-inline">
+                <thead>
+                    <th>Valor de Y</th>
+                </thead>
+                <tbody id="tbodyY">
+                   
+                </tbody>
+            </table>
+        </div>
+        
+</body>
+
+</html>
